@@ -3,6 +3,7 @@ This tool simplifies the process of assigning and mapping buttons on the Novatio
 
 ## Compatibility
 This tool is confirmed to work with the Novation LaunchPad Pro MK3 and Novation LaunchPad X. Other models of LaunchPad may not be compatible.
+The tox files and the example project file was made with TouchDesigner in version 2023.11600.
 
 ## Usage
 For usage examples, open `example.toe`.
@@ -13,37 +14,39 @@ For usage examples, open `example.toe`.
 
 2. **Configure MIDI Device Mapper in TouchDesigner:**
     - Open the `MIDI Device Mapper` from the `Dialog` menu in TouchDesigner.
-    - Create a new mapping for the LaunchPad and set both the input and output.
+    - Create a new mapping for the LaunchPad and set it as both the input and output.
 
 3. **Set up the Master Component:**
-    - Place the `launchcontrol_master.tox` (Master COMP) at the same or a higher directory level within your TouchDesigner project.
-    - For instance, place it in `project1`.
+    - Place the `launchpad_master.tox` (Master COMP) at the same level or a higher level in the directory hierarchy of the path where you will use this utility within your TouchDesigner project.
+    - For instance, place it in `/project1`.
 
 4. **Configure the Master COMP:**
-    - Set the `Device ID` and `MIDI Channel` of your LaunchPad in the Master COMP, and turn on `Active`. You can find these settings in the `MIDI Device Mapper`.
+    - Set the `Device ID` and `MIDI Channel` of your LaunchPad in the Master COMP, and turn on `Active`. You can configure these values in the `MIDI Device Mapper`.
     - If the Master COMP does not work correctly, press `Reset` on the Master COMP.
 
+6. **Edit the Map Configuration:**
+    - Open `map_config` to edit the components on the LaunchPad.
+        - Do not making any changes to other operators here.
+    - Each component work as a button or a group of radio select button. You can designate each component's function, position on the LaunchPad and LED color.
+    - Duplicate the `component` COMP to add components to the LaunchPad.
+    - Use the `Custom` page in the COMP to edit components. Each components can be momentary buttons, toggle buttons, or radio select buttons.
+
+    - ### Parameter Descriptions of Components
+        - **Active:** Make sure to enable this toggle to activate the component.
+        - **Parameter Name:** Name of the parameter for the component.
+        - **Type:** Function of the component. `Momentary`, `Toggle` and `Radio` are available. `Radio` mode works like radio select button.
+        - **Position:** Position of the component on the LaunchPad.
+        - **Size:** Size of the component on the LaunchPad (applicable for `radio` mode).
+        - **Pad LED Color:** Color of the LED on the LaunchPad with two parameters, `Hue` and `Value`. You can set the color individually for on state and off state.
+
 5. **Set up the Selector Component:**
-    - Place the `launchcontrol_select.tox` (Selector COMP) anywhere you need to assign the value of the components on the LaunchPad.
+    - Place the `launchpad_select.tox` (Selector COMP) anywhere you need to assign the value of the components on the LaunchPad.
     - Open the `Custom` page in `launchpad_select.tox` and set the following parameters:
         - **Master OP Name**: Enter `LaunchPad_master`.
         - **Depth Level**: Set the number of levels up in the directory hierarchy from the current location of `launchpad_select.tox` to where `launchpad_master.tox` is located. For example, if `launchpad_master.tox` is located two levels up, set `Depth Level` to `2`.
 
-6. **Edit the Map Configuration:**
-    - Open `map_config` to edit the components on the LaunchPad.
-    - Avoid making changes to other operators here.
-    - Duplicate the `control` COMP to add components to the LaunchPad.
-    - Use the `Custom` page in the COMP to edit components. Components can be momentary buttons, toggle buttons, or radio select buttons.
-
 7. **Configure Component Parameters:**
     - Set the component mode, give the parameter a name, set its position, and size (if using `radio`), and set the pad LED color.
-
-### Parameter Descriptions of Components
-- **Active:** Enable or disable the component.
-- **Parameter Name:** Name of the parameter for the component.
-- **Position:** Position of the component on the LaunchPad.
-- **Size:** Size of the component (applicable for `radio` mode).
-- **Pad LED Color:** Color of the LED on the LaunchPad pad.
 
 8. **Use Values from Selector COMP:**
     - You can use the values by either connecting to the output of the Selector COMP or by using Export CHOP directly from the Selector COMP.
