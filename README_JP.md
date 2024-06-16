@@ -30,7 +30,7 @@ Novation LaunchpadをTouchDesignerと統合し、ボタンのマッピングを�
 ### Step 5: マップ構成を編集する
 - `map_config`を開いてLaunchPad上のコンポーネントを編集します。
 - 各コンポーネントはボタンまたはラジオセレクトボタンのグループとして機能します。各コンポーネントの機能、LaunchPad上の位置、およびLEDの色を指定できます。
-- `component` COMPを複製して、LaunchPadにコンポーネントを追加します。
+- `control_component` COMPを複製して、LaunchPadにコンポーネントを追加します。
 - COMPの`Custom`ページを使用してコンポーネントを編集します。コンポーネントはモーメンタリーボタン、トグルボタン、またはラジオセレクトボタンとして設定できます。
 
 #### コンポーネントのパラメータの説明

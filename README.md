@@ -31,7 +31,7 @@ For usage examples, see inside the `example.toe`.
 ### Step 5: Edit the Map Configuration
 - Open `map_config` to edit the components on the LaunchPad.
 - Each component works as a button or a group of radio select buttons. You can designate each component's function, position on the LaunchPad, and LED color.
-- Duplicate the `component` COMP to add components to the LaunchPad.
+- Duplicate the `control_component` COMP to add components to the LaunchPad.
 - Use the `Custom` page in the COMP to edit components. Components can be momentary buttons, toggle buttons, or radio select buttons.
 
 #### Parameter Descriptions of Components
