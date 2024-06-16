@@ -2,6 +2,10 @@
 
 This tool simplifies the process of assigning and mapping buttons on the Novation Launchpad to functions in TouchDesigner.
 
+## Japanese Documentation
+日本語のドキュメント（参考版）もあります。  
+[日本語ドキュメント](README_JP.md)
+
 ## Compatibility
 This tool is confirmed to work with the Novation LaunchPad Pro MK3 and Novation LaunchPad X. Other models of LaunchPad may not be compatible.
 The tox files and the example project file were made with TouchDesigner in version 2023.11600.
