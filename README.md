@@ -2,6 +2,9 @@
 
 This tool simplifies the process of assigning and mapping buttons on the Novation Launchpad to functions in TouchDesigner.
 
+## Trademark
+Launchpad is a registered trademark of Focusrite. This project is not affiliated with or endorsed by Focusrite.
+
 ## Japanese Documentation
 日本語のドキュメント（参考版）もあります。  
 [日本語ドキュメント](README_JP.md)
