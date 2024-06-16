@@ -23,7 +23,7 @@ Novation LaunchpadをTouchDesignerと統合し、ボタンのマッピングを�
 ### Step 3: Masterコンポーネントを設定する
 - TouchDesignerプロジェクト内でこのユーティリティを使用するパスのディレクトリ階層の同じレベルまたは上位レベルに`launchpad_master.tox`を配置します。例えば、`project1`に配置します。
 
-### Step 4: Master COMPを構成する
+### Step 4: Master COMPを設置する
 - `launchpad_master.tox`内で、LaunchPadの`Device ID`と`MIDI Channel`を設定し、`Active`をオンにします。この設定は`MIDI Device Mapper`で行うことができます。
 - Master COMPが正しく動作しない場合は、Master COMPの`Reset`ボタンを押します。
 
