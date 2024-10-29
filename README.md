@@ -1,4 +1,4 @@
-# TouchDesigner-LaunchPad-Utility
+# TD-LaunchPad-Utility
 
 This tool simplifies the process of assigning and mapping buttons on the Novation Launchpad to function in TouchDesigner.
 
