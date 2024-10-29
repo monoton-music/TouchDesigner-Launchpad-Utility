@@ -63,8 +63,3 @@ LaunchpadはFocusriteの登録商標です。本プロジェクトは、Focusrit
 ### monoton  
 music producer, DJ & VJ, (virtual) experience design, generative visual design  
 [Linktree](https://linktr.ee/monoton)
-
-### サポート
-このプロジェクトが役に立った場合は、ぜひサポートをお願いします！
-
-<a href="https://www.buymeacoffee.com/monoton" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
